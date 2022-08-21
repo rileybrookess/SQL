@@ -1,0 +1,28 @@
+--create a store database in tech.
+
+CREATE TABLE TechStore (id INTEGER PRIMARY KEY, name TEXT, year INTEGER, price INTEGER, inventory INTEGER);
+INSERT INTO techstore VALUES 
+(1, "Tablet", 2021, 300, 18),
+(2, "USB C", 2022, 5, 31),
+(3, "Adapter", 2022, 15, 28),
+(4, "Laptop", 2022, 1600, 51),
+(5, "Laptop", 2021, 1300, 68),
+(6, "Laptop", 2020, 999, 14),
+(7, "SmartPhone", 2022, 1050, 87),
+(8, "SmartPhone", 2021, 750, 11),
+(9, "Camera", 2021, 68, 4),
+(10, "SmartTV", 2018, 400, 1),
+(11, "Router", 2021, 45, 4),
+(12, "RJ-11", 2017, 3, 29),
+(13, "Watch", 2018, 250, 7), 
+(14, "PC", 2007, 45, 2),
+(15, "Monitor", 2005, 21, 1);
+
+--display the datbase count in available inventory based on slected units requested at minimum 
+SELECT * FROM TechStore WHERE inventory >20;
+
+--show current inventory per selcted year
+SELECT * FROM TechStore WHERE year>=2021 ORDER BY inventory;
+
+-complete count of current inventory from all manufactered years 
+SELECT MAX(price) FROM TechStore;
