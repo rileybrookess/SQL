@@ -24,5 +24,5 @@ SELECT * FROM TechStore WHERE inventory >20;
 --show current inventory per selcted year
 SELECT * FROM TechStore WHERE year>=2021 ORDER BY inventory;
 
--complete count of current inventory from all manufactered years 
+-- report highest value cost for current inventory sales
 SELECT MAX(price) FROM TechStore;
